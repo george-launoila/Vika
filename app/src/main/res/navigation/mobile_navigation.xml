@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.george.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.george.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/weatherStationFragment"
+        android:name="com.example.george.WeatherStationFragment"
+        android:label="fragment_weather_station"
+        tools:layout="@layout/fragment_weather_station" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.george.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/dataReadFragment"
+        android:name="com.example.george.DataReadFragment"
+        android:label="fragment_data_read"
+        tools:layout="@layout/fragment_data_read" >
+        <action
+            android:id="@+id/action_dataReadFragment_to_dataDetailFragment"
+            app:destination="@id/dataDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataDetailFragment"
+        android:name="com.example.george.DataDetailFragment"
+        android:label="fragment_data_detail"
+        tools:layout="@layout/fragment_data_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentApiFragment"
+        android:name="com.example.george.CommentApiFragment"
+        android:label="fragment_comment_api"
+        tools:layout="@layout/fragment_comment_api" >
+        <action
+            android:id="@+id/action_commentApiFragment_to_commentDetailFragment"
+            app:destination="@id/commentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentDetailFragment"
+        android:name="com.example.george.CommentDetailFragment"
+        android:label="fragment_comment_detail"
+        tools:layout="@layout/fragment_comment_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.george.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_cityWeatherFragment"
+            app:destination="@id/cityWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openStreetMapFragment"
+        android:name="com.example.george.OpenStreetMapFragment"
+        android:label="fragment_open_street_map"
+        tools:layout="@layout/fragment_open_street_map" />
+    <fragment
+        android:id="@+id/cityWeatherFragment"
+        android:name="com.example.george.CityWeatherFragment"
+        android:label="fragment_city_weather"
+        tools:layout="@layout/fragment_city_weather" >
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+            android:name="longitude"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackReadFragment"
+        android:name="com.example.george.FeedbackReadFragment"
+        android:label="fragment_feedback_read"
+        tools:layout="@layout/fragment_feedback_read" />
+    <fragment
+        android:id="@+id/feedbackSendFragment"
+        android:name="com.example.george.FeedbackSendFragment"
+        android:label="fragment_feedback_send"
+        tools:layout="@layout/fragment_feedback_send" />
+    <fragment
+        android:id="@+id/basicAuthFragment"
+        android:name="com.example.george.BasicAuthFragment"
+        android:label="fragment_basic_auth"
+        tools:layout="@layout/fragment_basic_auth" />
+    <fragment
+        android:id="@+id/cloudMqttFragment2"
+        android:name="com.example.george.CloudMqttFragment"
+        android:label="fragment_cloud_mqtt"
+        tools:layout="@layout/fragment_cloud_mqtt" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.george.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.example.george.ApiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" />
+
+    <fragment
+        android:id="@+id/remoteMessageFragment"
+        android:name="com.example.george.RemoteMessageFragment"
+        android:label="fragment_remote_message"
+        tools:layout="@layout/fragment_remote_message" />
+    <fragment
+        android:id="@+id/customViewTestFragment2"
+        android:name="com.example.george.CustomViewTestFragment"
+        android:label="fragment_custom_view_test"
+        tools:layout="@layout/fragment_custom_view_test" />
+</navigation>
